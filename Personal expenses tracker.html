@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Secure Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Registration Section -->
+    <div class="container" id="register-section">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label>Email</label>
+            <input type="email" id="reg-email" required />
+            <label>Password</label>
+            <input type="password" id="reg-password" required />
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p id="reg-error" class="error_message"></p>
+    </div>
+
+    <!-- Login Section -->
+    <div class="container" id="login-section" style="display:none;">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label>Email</label>
+            <input type="email" id="login-email" required />
+            <label>Password</label>
+            <input type="password" id="login-password" required />
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p id="login-error" class="error_message"></p>
+    </div>
+
+    <!-- Tracker Section -->
+    <div class="container" id="tracker-section" style="display:none;">
+        <h2>Expense Tracker</h2>
+        <p id="welcome-user"></p>
+        <button id="logout-btn" class="btn logout">Logout</button>
+        <button id="view-saved-btn" class="btn view">View Saved Expenses</button>
+
+        <form id="budget-form">
+            <label>Enter Budget</label>
+            <input type="number" id="budget" required />
+            <button type="submit" class="btn">Set Budget</button>
+        </form>
+
+        <form id="expense-form">
+            <label>Expense Name</label>
+            <input type="text" id="expense-name" required />
+            <label>Amount</label>
+            <input type="number" id="expense-amount" required />
+            <button type="submit" class="btn">Add Expense</button>
+        </form>
+
+        <button id="save-btn" class="btn save">Save Expenses</button>
+
+        <div class="result">
+            <p><strong>Total Budget:</strong> ₹<span id="display-budget">0</span></p>
+            <p><strong>Total Expenses:</strong> ₹<span id="total-expenses">0</span></p>
+            <p><strong>Balance:</strong> ₹<span id="balance">0</span></p>
+        </div>
+
+        <ul id="expenses-list"></ul>
+    </div>
+
+    <!-- Saved Expenses View -->
+    <div class="container" id="saved-section" style="display:none;">
+        <h2>Saved Expenses</h2>
+        <ul id="saved-list"></ul>
+        <button id="back-btn" class="btn">Back to Tracker</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
